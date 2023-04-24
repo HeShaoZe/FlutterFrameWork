@@ -3,6 +3,7 @@ import 'Model/Post.dart';
 import 'ContentView/DrawContentView.dart';
 import 'ContentView/BottomNavigationEventBar.dart';
 import 'ContentView/ListViewArray.dart';
+import 'ContentView/HomeSecondPageView.dart';
 
 void main() {
   runApp(MainPage());
@@ -81,12 +82,13 @@ class ExtranContentView extends StatelessWidget {
             //   color: Colors.orange,
             //   size: 128,
             // ),
+            //   Icon(
+            //   Icons.crop_original,
+            //   color: Colors.yellow,
+            //   size: 128,
+            // ),
             MainContentListView(),
-            Icon(
-              Icons.crop_original,
-              color: Colors.yellow,
-              size: 128,
-            ),
+            HomeSecondPageView(),
             Icon(
               Icons.perm_media,
               color: Colors.red,
