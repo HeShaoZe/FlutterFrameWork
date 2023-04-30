@@ -4,6 +4,7 @@ import 'ContentView/DrawContentView.dart';
 import 'ContentView/BottomNavigationEventBar.dart';
 import 'ContentView/ListViewArray.dart';
 import 'ContentView/HomeSecondPageView.dart';
+import 'ContentView/HomeThreePageView.dart';
 
 void main() {
   runApp(MainPage());
@@ -89,11 +90,7 @@ class ExtranContentView extends StatelessWidget {
             // ),
             MainContentListView(),
             HomeSecondPageView(),
-            Icon(
-              Icons.perm_media,
-              color: Colors.red,
-              size: 128,
-            )
+            HomeThreePageView()
           ]),
           drawer: DrawContentView(),
           bottomNavigationBar: BottomNavigationEventBar(),

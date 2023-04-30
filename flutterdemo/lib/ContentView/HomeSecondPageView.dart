@@ -4,37 +4,62 @@ class HomeSecondPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: NetworkImage(
+                "https://img0.baidu.com/it/u=838014142,1152634226&fm=253&fmt=auto&app=138&f=JPEG?w=467&h=682"),
+            alignment: Alignment.topLeft,
+            repeat: ImageRepeat.repeatX,
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(Colors.brown, BlendMode.hardLight)),
+      ),
       alignment: Alignment.center,
       child: Container(
-        //color: Colors.green,
-        width: 50,
-        height: 50,
+        color: Colors.green,
+        width: 300,
+        height: 300,
         alignment: Alignment.center,
         padding: EdgeInsets.only(left: 10),
         margin: EdgeInsets.only(right: 100),
         child: Row(
           children: [
             Container(
+              width: 200,
+              height: 200,
               child: Icon(
                 Icons.offline_bolt,
-                color: Colors.white,
+                color: Colors.yellow,
               ),
               decoration: BoxDecoration(
-                color: Colors.grey,
-                // border: Border(
-                //   left: BorderSide(
-                //       color: Colors.red, width: 3.0, style: BorderStyle.solid),
-                //   right: BorderSide(
-                //       color: Colors.green,
-                //       width: 4.0,
-                //       style: BorderStyle.solid),
-                // ),
-                border: Border.all(
-                    color: Colors.green, width: 4.0, style: BorderStyle.solid),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(5),
-                ),
-              ),
+                  color: Colors.grey,
+                  // border: Border(
+                  //   left: BorderSide(
+                  //       color: Colors.red, width: 3.0, style: BorderStyle.solid),
+                  //   right: BorderSide(
+                  //       color: Colors.green,
+                  //       //borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5),),
+
+                  //       width: 4.0,
+                  //       style: BorderStyle.solid),
+                  // ),
+                  border: Border.all(
+                      color: Colors.green,
+                      width: 300.0,
+                      style: BorderStyle.solid),
+                  boxShadow: [
+                    const BoxShadow(
+                        offset: Offset(8, 8),
+                        color: Colors.red,
+                        blurRadius: 1.5,
+                        spreadRadius: 0)
+                  ],
+                  shape: BoxShape.circle,
+                  // gradient:
+                  //     RadialGradient(colors: [Colors.yellow, Colors.purple]),
+                  gradient: LinearGradient(
+                      colors: [Colors.red, Colors.yellow],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter)),
             )
           ],
         ),
